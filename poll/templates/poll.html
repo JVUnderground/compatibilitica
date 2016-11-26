@@ -1,0 +1,43 @@
+<html>
+{% load static %}
+<head>
+<title>{{question.title}}</title>
+<link rel="stylesheet" type="text/css" href="{% static "poll/main.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "poll/sliders.css" %}">
+</head>
+<body>
+<div id="parent">
+<div id="child">
+<div class="outer">
+<div class="inner">
+<h3>{{question.title}}</h3>
+<h2>{{question.text}}</h2>
+
+  <form action"/thanks/" method="post">
+  {% csrf_token %}
+  De ponto de vista da economia do país, essa legislação exibe facetas da<br>
+  <div class="column-left">Esquerda</div>
+  <div class="column-center">
+      {{ form.economic }}
+  </div>
+  <div class="column-right">Direita</div>
+  <br>
+  <br>
+
+  De ponto de vista social, essa legislação tem aspecto mais<br>
+  <div class="column-left">Libertário</div>
+  <div class="column-center">
+      {{ form.social }}
+  </div>
+  <div class="column-right">Autoritário</div>
+  <br><br>
+  <input name="questionid" type="hidden" value="{{ question.pk }}">
+  <input type="submit" class="enviar" value="Enviar" />
+  </form>
+  <a href="/vote/{{ qnext }}">Pular</a>
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
