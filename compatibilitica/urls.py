@@ -11,5 +11,5 @@ urlpatterns = patterns('',
     url(r'^$', FrontPage.as_view()),
     url(r'^vote(/)?$', QuestionPage.as_view()),
     url(r'^vote/(?P<question>\d+)(/)?$', QuestionPage.as_view()),
-    url(r'^\w+', FrontPage.as_view()),
+    url(r'^^(admin)\w+', FrontPage.as_view()),
 )
