@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block title %} Compatibilidade Política {% endblock %}
 {% block content %}
-<form action="/vote/" method="get">
-    <input type="submit" class="topright" value="Participe" />
-</form>
+
 {% load static %}
+<section id="main" class="wrapper">
+<div class="inner">
+        <header class="align-center">
+            <form action="/vote/" method="get">
+            <input type="submit" value="Participe" />
+          </form>
+        </header>
+  </div>
 <div class="outer">
     <div class="inner">
         <p>
@@ -47,5 +53,5 @@
         </p>
     </div>
 </div>
-
+</section>
 {% endblock %}

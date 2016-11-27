@@ -11,7 +11,6 @@
 /* Reset */
 	.topright { position: absolute; top: 10px; right: 20px; }
 	.outer { width: 100%; text-align: center; }
-	.inner { display: inline-block; overflow: hidden; }
 	.column-left{ float: left; width: 20%; margin-top:5px; font-weight: bold; }
 	.column-right{ float: right; width: 20%; margin-top:5px; font-weight: bold; }
 	.column-center{ display: inline-block; width: 60%; }
