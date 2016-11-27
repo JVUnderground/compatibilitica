@@ -1,8 +1,17 @@
 from django.views.generic.edit import FormView
+from django.views.generic.base import TemplateView
 from .models import Question
 from .forms import AnswerForm
 from django.http import HttpResponseRedirect
-# Create your views here.
+
+class FrontPage(TemplateView):
+    template_name = "index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(FrontPage, self).get_context_data(**kwargs)
+        count = Question.objects.all().count()
+        context['qcount'] = count
+        return context
 
 class QuestionPage(FormView):
     template_name = "poll.html"
@@ -20,8 +29,12 @@ class QuestionPage(FormView):
             question = Question.objects.get(pk=questionid)
         except Question.DoesNotExist:
             question = Question.objects.get(pk=1)
+            questionid = 1
             pass
 
+        count = Question.objects.all().count()
+
+        context['qcount'] = count
         context['question'] = question
         context['qnext'] = questionid + 1
         return context
