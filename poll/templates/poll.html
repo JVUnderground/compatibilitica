@@ -5,11 +5,13 @@
 {% endblock %}
 {% block title %}Compatibilidade Política{% endblock %}
 {% block content %}
-        <div class="topright">{{ question.id }} / {{ qcount }}</div>
+        <div class="topright"><b>Questão {{ question.id }} / {{ qcount }}</b></div>
         <div class="outer">
             <div class="inner">
             <h3>{{question.title}}</h3>
-            <h3 style="color:#6cc091">{{message}}</h3>
+            {% if message %}
+            <h3 style="color:#6cc091">Você já votou nessa questão. Deseja atualizar? Você pode sair a qualquer hora, pois a sua resposta já foi registrada.</h3>
+            {% endif %}
             <h2>{{question.text}}</h2>
 
             <form method="post">

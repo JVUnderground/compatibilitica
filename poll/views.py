@@ -52,7 +52,7 @@ class QuestionPage(FormView):
         
         aSession = self.request.session
         if aSession.get("%d" % questionid):
-            context['message'] = "Respondido. Deseja atualizar a resposta?"
+            context['message'] = True
 
 
         count = Question.objects.all().count()
