@@ -1,16 +1,17 @@
 <html>
-    <head>
-        {% load static %}<link rel="stylesheet" type="text/css" href="{% static "poll/main.css" %}"/>
-        {% block includes %}{% endblock %}
-        <title>{% block title %}{% endblock %}</title>
-    </head>
-	<body class="subpage">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="/" class="logo"><h3>Compatibilidade<strong> Política</strong></h3></a>
-                  <!--
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static " poll/main.css " %}"/>
+  {% block includes %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="subpage">
+  <!-- Header -->
+  <header id="header">
+    <div class="inner"> <a href="/" class="logo"><h3>Compatibilidade<strong> Política</strong></h3></a>
+      <!--
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="generic.html">Generic</a>
@@ -18,8 +19,9 @@
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
                     -->
-				</div>
-			</header>
-            {% block content %}{% endblock %}
-    </body>
+    </div>
+  </header>
+  {% block content %}
+  {% endblock %}
+  </body>
 </html>

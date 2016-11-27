@@ -4,61 +4,38 @@
 
 {% load static %}
 <section id="main" class="wrapper">
-<div class="inner">
-        <header class="align-center">
-            <form action="/vote/" method="get">
-            <input type="submit" value="Participe" />
-          </form>
-        </header>
-  
-  <div class="row">
+  <div class="inner">
+    <header class="align-center">
+      <form action="/vote/" method="get">
+        <input type="submit" value="Participe" /> </form>
+    </header>
+    <div class="row">
       <section class="8u 12u$(medium)">
-          <h2>Opine em matérias legislativas</h2>
-          <p align="justify">Este site tem apenas um objetivo:
-            <b>agregar dados sobre a percepção pública da atividade legislativa da Câmara e do Senado  brasileiro</b>.
-            <br>
-            Os dados serão usados eventualmente para a criação de um modelo de <b>Compatiblidade
-            Política</b>, que idealmente poderemos utilizar para encontrar candidatos do legislativo
-            de acordo com as suas opiniões e preferências políticas, e não porque seu jingle foi
-            super legal. O modelo será baseado no diagrama político de dois eixos chamado
-            <a href="https://www.politicalcompass.org" target="_blank">Political Compass</a>.
-                        <br>
-
-        No sistema do <a href="https://www.politicalcompass.org" target="_blank">Political Compass</a>, admite-se
-                que a visão Esquerda-Direita é antiquada, não sendo capaz de descrever muitas das políticas modernas.
-                Os autores então recomendam a simples modificação da incrementação de um eixo independente, Libertário-Autoritário.
-                Enquanto o eixo Esquerda-Direita, representa o quão intervencionista o Estado é na economia do país, o eixo
-                Libertário-Autoritário representa a influência do Estado no indivíduo.<br>
-
-                Assim, os dois eixos representam uma escala econômica e social respectivamente. Para que todos possam opinar
-                com perfeito entendimento das escalas, segue um excelente trecho da <a href="https://pt.wikipedia.org/wiki/Political_Compass" target="_blank">Wikipédia</a> que 
-                explica as duas escalas.</p>
-        </section>
-          <section class="4u 12u$(medium)">
-            <h2> </h2>
-          <img style="float: right; margin: 0px 15px 15px 0px;" src="{% static "poll/Political_chart.png" %}" width="300">
-        </section>
-  </div>
-  <div class="row">
+        <h2>Opine em matérias legislativas</h2>
+        <p align="justify">Este site tem apenas um objetivo: <b>agregar dados sobre a percepção pública da atividade legislativa da Câmara e do Senado  brasileiro</b>.
+          <br> Os dados serão usados eventualmente para a criação de um modelo de <b>Compatiblidade
+            Política</b>, que idealmente poderemos utilizar para encontrar candidatos do legislativo de acordo com as suas opiniões e preferências políticas, e não porque seu jingle foi super legal. O modelo será baseado no diagrama político de dois eixos chamado <a href="https://www.politicalcompass.org" target="_blank">Political Compass</a>.
+          <br> No sistema do <a href="https://www.politicalcompass.org" target="_blank">Political Compass</a>, admite-se que a visão Esquerda-Direita é antiquada, não sendo capaz de descrever muitas das políticas modernas. Os autores então recomendam a simples modificação da incrementação de um eixo independente, Libertário-Autoritário. Enquanto o eixo Esquerda-Direita, representa o quão intervencionista o Estado é na economia do país, o eixo Libertário-Autoritário representa a influência do Estado no indivíduo.
+          <br> Assim, os dois eixos representam uma escala econômica e social respectivamente. Para que todos possam opinar com perfeito entendimento das escalas, segue um excelente trecho da <a href="https://pt.wikipedia.org/wiki/Political_Compass" target="_blank">Wikipédia</a> que explica as duas escalas.</p>
+      </section>
+      <section class="4u 12u$(medium)">
+        <h2> </h2> <img style="float: right; margin: 0px 15px 15px 0px;" src="{% static " poll/Political_chart.png " %}" width="300"> </section>
+    </div>
+    <div class="row">
       <div class="6u 12u$(small)">
-          <h3>Escala econômica</h3>
-          <p align="justify">A <b>escala econômica</b> refere-se ao modo como a economia funciona. Quanto mais à esquerda, maior é o desejo de que a economia seja controlada por uma agência coletiva (que pode ser o Estado, ou uma rede de comunidades), sendo que no extremo da esquerda está o comunismo. Quanto mais à direita, maior o desejo que a economia seja controlada pela competição entre indivíduos e organizações, sendo que no extremo da direita está o neoliberalismo. De modo geral, quanto mais à direita, maior é a liberdade econômica e defesa da propriedade privada (capitalismo); já quanto mais à esquerda, maior é a tendência ao intervencionismo estatal na economia e/ou ao coletivismo.</p>
+        <h3>Escala econômica</h3>
+        <p align="justify">A <b>escala econômica</b> refere-se ao modo como a economia funciona. Quanto mais à esquerda, maior é o desejo de que a economia seja controlada por uma agência coletiva (que pode ser o Estado, ou uma rede de comunidades), sendo que no extremo da esquerda está o comunismo. Quanto mais à direita, maior o desejo que a economia seja controlada pela competição entre indivíduos e organizações, sendo que no extremo da direita está o neoliberalismo. De modo geral, quanto mais à direita, maior é a liberdade econômica e defesa da propriedade privada (capitalismo); já quanto mais à esquerda, maior é a tendência ao intervencionismo estatal na economia e/ou ao coletivismo.</p>
       </div>
       <div class="6u$ 12u$(small)">
-          <h3>Escala social</h3>
-          <p align="justify">A <b>escala social</b> refere-se ao grau de intromissão do Estado na vida pessoal. Quanto mais libertário, menor é a intromissão estatal e maior é a liberdade dos indivíduos, sendo que o extremo seria o anarquismo. Quanto mais autoritário, maior é a intromissão estatal na vida dos indivíduos, sendo que no extremo está o fascismo.<br>
-      </div>
+        <h3>Escala social</h3>
+        <p align="justify">A <b>escala social</b> refere-se ao grau de intromissão do Estado na vida pessoal. Quanto mais libertário, menor é a intromissão estatal e maior é a liberdade dos indivíduos, sendo que o extremo seria o anarquismo. Quanto mais autoritário, maior é a intromissão estatal na vida dos indivíduos, sendo que no extremo está o fascismo.
+          <br> </div>
+    </div>
+    <hr class="minor" />
+    <p>Para <a href="/vote">opinar</a>, basta utilizar as escalas indicadas na figura abaixo para cada objeto legislativo que será analisado neste site.</p>
+    <div class="align-center">
+      <form action="/vote/" method="get">
+        <input type="submit" value="Participe" /> </form> <img src="{% static " poll/vote.png " %}"> </div>
   </div>
-					<hr class="minor" />
-  <p>Para <a href="/vote">opinar</a>, basta utilizar as escalas indicadas na figura abaixo para cada objeto legislativo
-            que será analisado neste site.</p>
-  <div class="align-center">
-              <form action="/vote/" method="get">
-                <input type="submit" value="Participe" />
-            </form>
-            <img src="{% static "poll/vote.png" %}">
-  </div>
-      </div>
-
-  </section>
+</section>
 {% endblock %}
