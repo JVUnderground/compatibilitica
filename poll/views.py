@@ -18,7 +18,12 @@ class QuestionPage(FormView):
     form_class = AnswerForm
 
     def get_initial(self):
-        questionid = self.kwargs['question']
+        questionid = '1'
+        try:
+            questionid = self.kwargs['question']
+        except:
+            pass
+
         aSession = self.request.session
         if aSession.get(questionid):
             answer = Answer.objects.get(pk=int(aSession[questionid]))
