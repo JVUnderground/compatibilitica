@@ -63,7 +63,7 @@ DATABASES = {
         'NAME': 'taskbuster_db',
         'USER': 'admin',
         'PASSWORD': 'ad13lj08',
-        'HOST': '',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
