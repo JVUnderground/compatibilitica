@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import urlparse
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -57,14 +58,15 @@ WSGI_APPLICATION = 'compatibilitica.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'taskbuster_db',
         'USER': 'admin',
         'PASSWORD': 'ad13lj08',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': url.host,
+        'PORT': url.port,
     }
 }
 
