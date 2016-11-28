@@ -58,15 +58,30 @@ WSGI_APPLICATION = 'compatibilitica.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
+database = 'taskbuster_db'
+user = 'admin'
+password = 'ad13lj08'
+host = '' # default
+port = '' #
+# This only works on Heroku, in case of local setup, use values above.
+try:
+    url = urlparse.urlparse(os.environ["DATABASE_URL"])
+    database = url.path[1:]
+    user = url.username
+    password = url.password
+    host = url.hostname
+    port = url.port
+except KeyError:
+    pass
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': url.path[1:],
-        'USER': url.username,
-        'PASSWORD': url.password,
-        'HOST': url.hostname,
-        'PORT': url.port,
+        'NAME': database,
+        'USER': user,
+        'PASSWORD': password,
+        'HOST': host,
+        'PORT': port,
     }
 }
 
